@@ -34,3 +34,11 @@ $(document).ready(function() {
     afterRender: function() {},
   });
 });
+
+function sideOpen() {
+  document.querySelector('#pp-nav').style.zIndex = '-1';
+}
+
+function sideClose() {
+  document.querySelector('#pp-nav').style.zIndex = '100';
+}

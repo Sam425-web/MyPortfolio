@@ -20,162 +20,84 @@
 </head>
 
 <body>
-
-<section class="fixed w-full z-10 bg-gray-100 border-b font-poppins dark:bg-gray-800 dark:border-gray-800">
+<!-- navbar -->
+<section class="fixed w-full z-10 bg-gray-100 border-b">
     <div class="container mx-auto" x-data="{open:false}">
         <nav class="flex justify-between ">
             <div class="flex items-center justify-between w-full px-4 py-2 lg:px-2 ">
-                <a class="text-2xl text-gray-700 dark:text-gray-400" href="">Logo</a>
-                <div class="flex items-center lg:hidden ">
-                    <a class="mr-4 dark:text-gray-400" href="">
-                        <svg class="bi bi-heart" fill="currentColor" height="20" viewBox="0 0 16 16"
-                             width="20" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                        </svg>
-                    </a>
-                    <a class="flex items-center mr-4 dark:text-gray-400" href="">
-                        <svg class=" bi bi-cart" fill="currentColor" height="20" viewBox="0 0 16 16"
-                             width="20" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                        </svg>
-                    </a>
-                    <button
-                            @click="open =true"
-                            class="flex items-center px-3 py-2 text-blue-600 border border-blue-200 rounded dark:text-gray-400 hover:text-blue-800 hover:border-blue-300 lg:hidden">
-                        <svg class="bi bi-list" fill="currentColor" height="16" viewBox="0 0 16 16"
-                             width="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                                  fill-rule="evenodd"/>
-                        </svg>
-                    </button>
-                </div>
+                <a class="text-2xl text-gray-700 dark:text-gray-400" href="">Ye Naing Tun</a>
                 <ul class="hidden font-medium lg:flex">
-                    <li class="mr-12"><a class="text-gray-700 hover:text-gray-600 dark:text-gray-400"
-                                         href="">Product</a>
+                    <li class="mr-12">
+                        <a class="text-gray-700 hover:text-gray-600 dark:text-gray-400" href="tel:+959775457805">Call Me
+                            (+959775457805)</a>
                     </li>
-                    <li class="mr-12"><a class="text-gray-700 hover:text-gray-600 dark:text-gray-400"
-                                         href="">Category</a>
-                    </li>
-                    <li class="mr-12"><a class="text-gray-700 hover:text-gray-600 dark:text-gray-400"
-                                         href="">Collection</a>
-                    </li>
-                    <li class="mr-12"><a class="text-gray-700 hover:text-gray-600 dark:text-gray-400"
-                                         href="">Brand</a>
+                    <li class="mr-12">
+                        <a class="text-gray-700 hover:text-gray-600 dark:text-gray-400"
+                           href="mailto:yenaingtun425@gmail.com">yenaingtun425@gmail.com</a>
                     </li>
                 </ul>
-                <div
-                        class="items-center hidden max-w-xs py-2 pl-4 bg-white rounded-lg dark:text-gray-300 dark:bg-gray-600 lg:flex">
-                    <svg class="mr-2 bi bi-search" fill="currentColor" height="30" viewBox="0 0 16 16"
-                         width="30" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                    </svg>
-                    <input class="w-full py-2 pl-3 border-0 dark:text-gray-300 dark:bg-gray-600" placeholder="Search..."
-                           type="text">
-                    <div class="pr-4">
-                        <select class="pl-3 pr-4 border-0 border-l border-gray-400 cursor-pointer dark:bg-gray-600"
-                                id=""
-                                name="">
-                            <option value="">All items</option>
-                            <option value="">Option 1</option>
-                            <option value="">Option 2</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="items-center justify-end hidden lg:flex dark:text-gray-400">
-                    <a class="mr-6" href="">
-                        <svg class="bi bi-heart" fill="currentColor" height="23" viewBox="0 0 16 16"
-                             width="23" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a class="flex items-center dark:text-gray-400" href="">
-                        <svg class="bi bi-cart" fill="currentColor" height="24" viewBox="0 0 16 16"
-                             width="24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                        </svg>
-                    </a>
-                    <a class="items-center hidden pl-6 text-sm font-semibold lg:flex dark:text-gray-400" href="">
-                        <svg class="mr-1 bi bi-person" fill="currentColor" height="26" viewBox="0 0 16 16"
-                             width="26" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z">
-                            </path>
-                        </svg>
-                    </a>
+                <div class="font-medium flex">
+                    <button @click="open = !open; sideOpen()"
+                            class="text-gray-500 w-10 h-10 relative focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <span class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                            <span :class="{'rotate-45': open,' -translate-y-1.5': !open }"
+                                  aria-hidden="true"
+                                  class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"></span>
+                            <span :class="{'opacity-0': open } "
+                                  aria-hidden="true"
+                                  class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"></span>
+                            <span :class="{'-rotate-45': open, ' translate-y-1.5': !open}"
+                                  aria-hidden="true"
+                                  class="block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"></span>
+                        </span>
+                    </button>
                 </div>
             </div>
         </nav>
         <!-- Mobile Sidebar -->
-        <div :class="{'translate-x-0 ease-in-opacity-100' :open===true, '-translate-x-full ease-out opacity-0' : open===false}"
-             class="fixed inset-0 w-full bg-gray-800 opacity-25 lg:hidden dark:bg-gray-400">
-        </div>
-        <div :class="{'translate-x-0 ease-in-opacity-100' :open===true, '-translate-x-full ease-out opacity-0' : open===false}"
-             class="absolute inset-0 z-10 h-screen p-3 text-gray-700 duration-500 transform shadow-md dark:bg-gray-800 bg-blue-50 w-80 lg:hidden lg:transform-none lg:relative">
-            <div class="flex justify-between">
-                <a class="p-2 text-2xl font-bold dark:text-gray-400" href="#">Logo</a>
-                <button @click="open=false" class="p-2 rounded-md hover:text-blue-300 lg:hidden dark:text-gray-300">
-                    <svg class="bi bi-x-circle" fill="currentColor" height="24" viewBox="0 0 16 16"
-                         width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path
-                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                    </svg>
+        <div class="fixed inset-0 bg-slate-900/75" x-cloak x-show="open" x-transition.opacity></div>
+        <div @click.away="open = false; sideClose()" class="fixed inset-y-0 right-0 z-50 w-screen max-w-lg bg-white"
+             x-cloak x-show="open"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-end="translate-x-0"
+             x-transition:enter-start="translate-x-full"
+             x-transition:leave="transition ease-in duration-300"
+             x-transition:leave-end="translate-x-full"
+             x-transition:leave-start="translate-x-0"
+        >
+            <div class="flex pr-8 pt-4">
+                <button @click="open = false; sideClose()"
+                        class="ml-auto text-gray-500 w-10 h-10 relative focus:outline-none">
+                    <span class="sr-only">Open main menu</span>
+                    <span class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                            <span :class="{'rotate-45': open,' -translate-y-1.5': !open }"
+                                  aria-hidden="true"
+                                  class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"></span>
+                            <span :class="{'opacity-0': open } "
+                                  aria-hidden="true"
+                                  class="block absolute  h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"></span>
+                            <span :class="{'-rotate-45': open, ' translate-y-1.5': !open}"
+                                  aria-hidden="true"
+                                  class="block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"></span>
+                        </span>
                 </button>
             </div>
-            <div class="flex items-center px-5 mt-7 lg:hidden">
-                <a class="items-center mr-4 text-sm font-semibold lg:flex dark:text-gray-400" href="">
-                    <svg class=" bi bi-person" fill="currentColor" height="25" viewBox="0 0 16 16"
-                         width="25" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-                    </svg>
-                </a>
-                <a class="mr-4 dark:text-gray-400" href="">
-                    <svg class="bi bi-heart" fill="currentColor" height="23" viewBox="0 0 16 16"
-                         width="22" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                    </svg>
-                </a>
-                <a class="flex items-center mr-4 dark:text-gray-400" href="">
-                    <svg class=" bi bi-cart" fill="currentColor" height="23" viewBox="0 0 16 16"
-                         width="23" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                    </svg>
-                </a>
-            </div>
-            <div
-                    class="flex items-center max-w-xs py-2 pl-4 bg-white rounded-lg mt-7 dark:text-gray-300 dark:bg-gray-600 lg:hidden">
-                <input class="w-full py-2 pl-3 border-0 dark:text-gray-300 dark:bg-gray-600" placeholder="Search..."
-                       type="text">
-                <svg class="mr-2 bi bi-search" fill="currentColor" height="30" viewBox="0 0 16 16"
-                     width="30" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                </svg>
-            </div>
-            <ul class="px-5 text-left mt-7">
+            <ul class="flex flex-col items-center justify-center text-center">
                 <li class="pb-3">
-                    <a class="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-100" href="">Home</a>
+                    <a class="text-2xl text-gray-700 hover:text-blue-400" href="">Home</a>
                 </li>
                 <li class="pb-3">
-                    <a class="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-400" href="">About us</a>
+                    <a class="text-2xl text-gray-700 hover:text-blue-400" href="">About us</a>
                 </li>
                 <li class="pb-3">
-                    <a class="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-400" href="">Features</a>
+                    <a class="text-2xl text-gray-700 hover:text-blue-400" href="">Features</a>
                 </li>
                 <li class="pb-3">
-                    <a class="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-400" href="">Blog </a>
+                    <a class="text-2xl text-gray-700 hover:text-blue-400" href="">Blog </a>
                 </li>
                 <li class="pb-3">
-                    <a class="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-400" href="">Testimonials</a>
+                    <a class="text-2xl text-gray-700 hover:text-blue-400" href="">Testimonials</a>
                 </li>
             </ul>
         </div>
