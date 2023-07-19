@@ -4,8 +4,8 @@ $(document).ready(function() {
     verticalCentered: true,
     sectionsColor: [
       '#f2f2f2',
-      '#4BBFC3',
-      '#7BAABE',
+      '#f2f2f2',
+      'whitesmoke',
       'whitesmoke',
       'whitesmoke'],
     anchors: ['home', 'about', 'experiences', 'projects', 'contact'],
