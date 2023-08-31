@@ -50,6 +50,22 @@ function addRemoveCustomClass() {
   } else {
     customDiv.classList.remove('pp-scrollable');
   }
+
+    // After the content is loaded, add the "loaded" class to the body
+  window.addEventListener('load',function(){
+    const preloader = document.querySelector(".preloader");
+    const content = document.querySelector(".content");
+
+    // Display the preloader initially
+    preloader.style.display = "flex";
+    content.style.display = "none";
+
+    // Hide the preloader and show the content after a delay
+    setTimeout(function () {
+        preloader.style.display = "none";
+        content.style.display = "block";
+    }, 3000); // 3000 milliseconds (3 seconds)
+  });
 }
 
 addRemoveCustomClass();
