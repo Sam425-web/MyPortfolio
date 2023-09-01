@@ -52,18 +52,21 @@ function addRemoveCustomClass() {
   }
 
     // After the content is loaded, add the "loaded" class to the body
-  window.addEventListener('load',function(){
+  $(document).ready(function() {
     const preloader = document.querySelector(".preloader");
     const content = document.querySelector(".content");
+    const nav = document.querySelector('#pp-nav');
 
     // Display the preloader initially
     preloader.style.display = "flex";
     content.style.display = "none";
+    nav.style.display = "none";
 
     // Hide the preloader and show the content after a delay
     setTimeout(function () {
         preloader.style.display = "none";
         content.style.display = "block";
+        nav.style.display = "block";
     }, 3000); // 3000 milliseconds (3 seconds)
   });
 }
