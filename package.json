@@ -1,9 +1,12 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.2.4"
-  },    
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx tailwindcss -i src/input.scss  -o src/output.css --watch"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.0.2"
   }
 }
